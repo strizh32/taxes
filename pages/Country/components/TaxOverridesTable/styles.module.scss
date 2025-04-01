@@ -1,0 +1,79 @@
+@import 'ui-scss/colors.scss';
+@import 'ui-scss/mixins.scss';
+
+$TaxOverridesTableIconGroupWidth: 56px;
+$TaxOverridesTableIconGroupHalf: calc($TaxOverridesTableIconGroupWidth / 2);
+
+.TaxOverridesTable {
+  &__Icon {
+    cursor: pointer;
+    margin-left: 4px;
+
+    path {
+      fill: $GRAY_500;
+    }
+
+    &:hover {
+      path {
+        fill: $BLACK_500;
+      }
+    }
+
+    &_delete {
+      &:hover {
+        path {
+          fill: $RED_500;
+        }
+      }
+    }
+
+    &_info {
+      width: 16px;
+      height: 16px;  
+      cursor: default;
+      min-width: 16px;
+
+      path {
+        fill: $ORANGE_500;
+      }
+
+      &:hover {
+        path {
+          fill: $ORANGE_500;
+        }
+      }
+    }
+  }
+
+  &__LeftCell {
+    padding-right: 20px;
+    flex-basis: calc(65% - $TaxOverridesTableIconGroupHalf);
+    box-sizing: border-box;
+
+    @include tabletStyles {
+      flex-basis: calc(50% - $TaxOverridesTableIconGroupHalf);
+    }
+  }
+
+  &__CenterCell {
+    flex-basis: calc(35% - $TaxOverridesTableIconGroupHalf);
+
+    @include tabletStyles {
+      flex-basis: calc(50% - $TaxOverridesTableIconGroupHalf);
+    }
+  }
+
+  &__CenterInnerCell {
+    @include flexStyles($align: center);
+    width: 100%;
+  }
+
+  &__Title {
+    @include textOverflowStyles;
+  }
+
+  &__RightCell {
+    flex: 0 1 $TaxOverridesTableIconGroupWidth;
+    max-height: 24px;
+  }
+}

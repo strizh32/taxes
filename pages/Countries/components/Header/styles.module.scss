@@ -1,0 +1,32 @@
+@import "ui-scss/mixins.scss";
+
+.Header {
+  margin-bottom: 26px;
+  position: relative;
+
+  &__SortList {
+    min-width: 240px;
+    
+    & > ul {
+      overflow-y: visible;
+      max-height: inherit;
+    }
+  }
+
+  &__ToggleWrapper {
+    @include flexStyles($align: center);
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: -5px;
+    
+    @include desktopStyles {
+      position: static;
+    }
+  }
+
+  &__ToggleLabel {
+    padding: 0 0 0 8px;
+    font-size: 14px;
+  }
+}

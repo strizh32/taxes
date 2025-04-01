@@ -1,0 +1,2 @@
+export const COLLECTIONS_PER_PAGE_COUNT = 10;
+export const TAX_OVERRIDES_PER_PAGE_COUNT = 10;

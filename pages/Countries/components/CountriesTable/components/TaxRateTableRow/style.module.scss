@@ -1,0 +1,83 @@
+@import "ui-scss/colors.scss";
+@import "ui-scss/mixins.scss";
+
+.TableRow {
+  --TableRow-container-padding: 20px;
+
+  &:hover {
+    .TableRow__ArrowIcon {
+      display: initial;
+    }
+
+    .TableRow__EditIcon {
+      display: none;
+    }
+  }
+
+  &__Rate_empty {
+    color: $GRAY_400;
+  }
+
+  &__ArrowIcon {
+    display: none;
+  }
+
+  &__EditIcon {
+    path {
+      fill: $GRAY_500;
+    }
+  }
+
+  &_mobile {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    width: 100%;
+    max-width: calc(100vw - var(--TableRow-container-padding) * 2);
+    padding: 18px 16px;
+    border: 1px solid $GRAY_200;
+    margin: 0 0 8px;
+    border-radius: 4px;
+
+    @include tabletStyles {
+      --TableRow-container-padding: 48px;
+    }
+
+    &:before {
+      visibility: hidden;
+    }
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__MobileContent {
+    display: flex;
+    flex-flow: column wrap;
+    margin-right: auto;
+    overflow: hidden;
+
+    @include tabletStyles {
+      flex-flow: row wrap;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__MobileContentTitle {
+    @include textOverflowStyles;
+    align-self: flex-start;
+  }
+
+  &__MobileContentTitleWrapper {
+    display: flex;
+  }
+
+  &__ActionCell {
+    width: 24px;
+    height: 24px;
+  }
+}

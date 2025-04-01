@@ -1,0 +1,19 @@
+.TaxOverridePopup {
+  &__Title {
+    margin-bottom: 20px;
+  }
+
+  &__SuggestionField {
+    margin-bottom: 16px;
+  }
+
+  &__Actions {
+    margin-top: 32px;
+  }
+
+  &__LinkButton {
+    all: unset;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+}

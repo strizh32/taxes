@@ -1,0 +1,46 @@
+@import "ui-scss/mixins.scss";
+@import "ui-scss/colors.scss";
+
+.CountriesTable {
+  position: unset;
+
+  &__ActionCell {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__SmallInfo {
+    font-size: 12px;
+    color: $GRAY_600;
+    margin: 0;
+    padding: 8px 0 20px 0;
+  }
+
+  &__InfoIcon {
+    svg path {
+      fill: $GRAY_500;
+    }
+  }
+
+  &__ProvidedByLink {
+    all: unset;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  &__CloseIcon {
+    @include flexStyles($align: center);
+
+    svg path {
+      fill: $GRAY_500;
+    }
+
+    svg circle {
+      stroke: $GRAY_500;
+    }
+  }
+
+  &_hasBottomBorder {
+    border-bottom: 1px solid $GRAY_200;
+  }
+}

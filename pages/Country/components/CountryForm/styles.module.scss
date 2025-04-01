@@ -1,0 +1,84 @@
+@import "ui-scss/colors";
+@import "ui-scss/mixins";
+
+.CountryForm {
+  flex-grow: 1;
+
+  &__Description {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0;
+    padding: 0 0 16px;
+  }
+
+  &__TaxInputField {
+    margin: 0 0 40px;
+
+    .CountryForm__Input_default {
+      color: $GRAY_500;
+    }
+  }
+
+  &__Breadcrumbs {
+    margin: 0 0 18px;
+  }
+
+  &__BreadcrumbsRootItem {
+    cursor: pointer;
+  }
+
+  &__BreadcrumbsCurrentItem {
+    color: $GRAY_500;
+  }
+
+  &__AddButton {
+    margin: 0 0 24px;
+  }
+
+  &__Legend {
+    margin: 0 0 8px;
+  }
+
+  &__CancelButton {
+    margin-right: 8px;
+  }
+
+  &__Prefix {
+    color: $GRAY_500;
+  }
+
+  &__InputIcon {
+    path {
+      fill: $GRAY_500;
+    }
+
+    &:hover {
+      path {
+        fill: $BLACK_500;
+      }
+    }
+  }
+
+  &__InfoIcon {
+    width: 16px;
+    height: 16px;
+
+    path {
+      fill: $ORANGE_500;
+    }
+  }
+
+  &__TableDesc {
+    @include flexStyles($align: center, $gap: 4px);
+    font-size: 12px;
+    line-height: 20px;
+    color: $GRAY_600;
+    padding: 8px 0;
+  }
+
+  &__Link {
+    text-decoration: underline;
+    color: $GRAY_600;
+    cursor: pointer;
+  }
+}
